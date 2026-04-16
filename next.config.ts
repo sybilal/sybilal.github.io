@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === 'production'
-const repo = 'portfolio'
+const rawBasePath = process.env.NEXT_PUBLIC_BASE_PATH || 'portfolio'
+const normalizedBasePath = rawBasePath
+  ? rawBasePath.startsWith('/')
+    ? rawBasePath.replace(/\/$/, '')
+    : `/${rawBasePath.replace(/\/$/, '')}`
+  : ''
 
 const nextConfig: NextConfig = {
   output: 'export',
@@ -9,8 +14,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: isProd ? `/${repo}` : '',
-  assetPrefix: isProd ? `/${repo}/` : '',
+  basePath: isProd ? normalizedBasePath : '',
+  assetPrefix: isProd ? `${normalizedBasePath}/` : '',
 }
 
 export default nextConfig;
