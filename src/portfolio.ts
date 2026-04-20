@@ -14,11 +14,12 @@ import nextuLogo from "./assets/images/nextuLogo.webp";
 import codeInLogo from "./assets/images/codeInLogo.webp";
 import googleAssistantLogo from "./assets/images/googleAssistantLogo.webp";
 import pwaLogo from "./assets/images/pwaLogo.webp";
+import type { AchievementSectionType, BigProjectsType, BlogSectionType, ContactInfoType, EducationInfoType, OpenSourceType, PodcastSectionType, ResumeSectionType, TalkSectionType, TechStackType, TwitterDetailsType, WorkExperiencesType } from "./portfolioTypes";
 
 // Splash Screen
 
 const splashScreen = {
-  enabled: true, // set false to disable splash screen
+  enabled: false, // set false to disable splash screen
   animation: splashAnimation,
   duration: 2000 // Set animation duration as per your animation
 };
@@ -30,8 +31,8 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Saad Pasta",
-  title: "Hi all, I'm Saad",
+  username: "Bilal",
+  title: "Hi all, I'm Bilal",
   subTitle: emoji(
     "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
   ),
@@ -50,6 +51,12 @@ const socialMediaLinks = {
   facebook: "https://www.facebook.com/saad.pasta7",
   medium: "https://medium.com/@saadpasta",
   stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
+
+
+  kaggle: "",
+  instagram: "",
+  twitter: "",
+
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
@@ -132,7 +139,7 @@ https://fontawesome.com/icons?d=gallery */
 
 // Education Section
 
-const educationInfo = {
+const educationInfo: EducationInfoType = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
@@ -159,7 +166,7 @@ const educationInfo = {
 
 // Your top 3 proficient stacks/tech experience
 
-const techStack = {
+const techStack: TechStackType = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
   experience: [
     {
@@ -180,7 +187,7 @@ const techStack = {
 
 // Work experience section
 
-const workExperiences = {
+const workExperiences: WorkExperiencesType = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
@@ -214,14 +221,14 @@ const workExperiences = {
 /* Your Open Source Section to View Your Github Pinned Projects
 To know how to get github key look at readme.md */
 
-const openSource = {
+const openSource: OpenSourceType = {
   showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
   display: true // Set false to hide this section, defaults to true
 };
 
 // Some big projects you have worked on
 
-const bigProjects = {
+const bigProjects: BigProjectsType = {
   title: "Big Projects",
   subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
   projects: [
@@ -255,7 +262,7 @@ const bigProjects = {
 // Achievement Section
 // Include certificates, talks etc
 
-const achievementSection = {
+const achievementSection: AchievementSectionType = {
   title: emoji("Achievements And Certifications 🏆 "),
   subtitle:
     "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
@@ -315,7 +322,7 @@ const achievementSection = {
 
 // Blogs Section
 
-const blogSection = {
+const blogSection: BlogSectionType = {
   title: "Blogs",
   subtitle:
     "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
@@ -339,7 +346,7 @@ const blogSection = {
 
 // Talks Sections
 
-const talkSection = {
+const talkSection: TalkSectionType = {
   title: "TALKS",
   subtitle: emoji(
     "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
@@ -358,7 +365,7 @@ const talkSection = {
 
 // Podcast Section
 
-const podcastSection = {
+const podcastSection: PodcastSectionType = {
   title: emoji("Podcast 🎙️"),
   subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
 
@@ -370,7 +377,7 @@ const podcastSection = {
 };
 
 // Resume Section
-const resumeSection = {
+const resumeSection: ResumeSectionType = {
   title: "Resume",
   subtitle: "Feel free to download my resume",
 
@@ -378,7 +385,7 @@ const resumeSection = {
   display: true // Set false to hide this section, defaults to true
 };
 
-const contactInfo = {
+const contactInfo: ContactInfoType = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
@@ -388,7 +395,7 @@ const contactInfo = {
 
 // Twitter Section
 
-const twitterDetails = {
+const twitterDetails: TwitterDetailsType = {
   userName: "twitter", //Replace "twitter" with your twitter username without @
   display: true // Set true to display this section, defaults to false
 };
