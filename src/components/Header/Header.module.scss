@@ -1,4 +1,4 @@
-﻿@import "../../_globalColor";
+﻿@use "../../globalColor" as *;
 
 .headroom-wrapper {
   max-height: 100px;
@@ -13,8 +13,16 @@
   color: $textColorDark !important;
 }
 
+.dark_menu li a.logo_name {
+  color: $textColorDark !important;
+}
+
 .dark_menu li a:hover {
   background-color: $buttonColor !important;
+}
+
+.dark_menu.header .logo {
+  color: unset;
 }
 
 .header {
@@ -56,6 +64,8 @@
   margin-top: 10px;
   line-height: normal;
 }
+
+
 
 .header .logo_name {
   font-family: "Agustina Regular";
@@ -127,24 +137,24 @@
   display: none;
 }
 
-.header .menu_btn:checked ~ .menu {
+.header .menu_btn:checked~.menu {
   max-height: 486px;
 }
 
-.header .menu_btn:checked ~ .menu_icon .navicon {
+.header .menu_btn:checked~.menu_icon .navicon {
   background: transparent !important;
 }
 
-.header .menu_btn:checked ~ .menu_icon .navicon:before {
+.header .menu_btn:checked~.menu_icon .navicon:before {
   transform: rotate(-45deg);
 }
 
-.header .menu_btn:checked ~ .menu_icon .navicon:after {
+.header .menu_btn:checked~.menu_icon .navicon:after {
   transform: rotate(45deg);
 }
 
-.header .menu_btn:checked ~ .menu_icon:not(.steps) .navicon:before,
-.header .menu_btn:checked ~ .menu_icon:not(.steps) .navicon:after {
+.header .menu_btn:checked~.menu_icon:not(.steps) .navicon:before,
+.header .menu_btn:checked~.menu_icon:not(.steps) .navicon:after {
   top: 0;
 }
 
@@ -152,14 +162,17 @@
   .header li {
     float: left;
   }
+
   .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
   .header .menu {
     max-height: none;
   }
+
   .header .menu_icon {
     display: none;
   }

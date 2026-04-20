@@ -1,6 +1,8 @@
 @import "../../_globalColor";
 
-#topButton {
+
+
+.top_button {
   visibility: hidden;
   position: fixed;
   bottom: 20px;
@@ -16,7 +18,7 @@
   font-size: 25px;
 }
 
-#topButton:hover {
+.top_button:hover {
   background-color: $topButtonHover;
   transition: all ease-in-out 0.2s;
 }

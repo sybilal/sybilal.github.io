@@ -1,7 +1,14 @@
 ﻿
 import styles from "./Button.module.scss";
 
-const Button = ({ text, className, href, newTab }: { text: string; className: string; href: string; newTab: boolean }) => {
+interface ButtonProps {
+  text: string;
+  className: string;
+  href: string;
+  newTab: boolean;
+}
+
+const Button = ({ text, className, href, newTab }: ButtonProps) => {
   return (
     <div className={className}>
       <a

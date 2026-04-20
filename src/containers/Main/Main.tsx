@@ -18,8 +18,9 @@ import ScrollToTopButton from "../TopButton";
 import { StyleProvider } from "../../contexts/StyleContext";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { splashScreen } from "../../portfolio";
-import SplashScreen from "../SplashScreen/SplashScreen";
+import SplashScreen from "../SplashScreen";
 import styles from "./Main.module.scss";
+import Greeting from "../../components/Greeting";
 
 const Main = () => {
   const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
@@ -51,8 +52,8 @@ const Main = () => {
         ) : (
           <>
             <Header />
-            {/* <Greeting />
-            <Skills />
+            <Greeting />
+            {/* <Skills />
             <StackProgress />*/}
             <Education />
             {/*<WorkExperience />
