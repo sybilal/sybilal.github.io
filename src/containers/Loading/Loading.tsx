@@ -3,7 +3,7 @@ import styles from "./Loading.module.scss";
 
 const Loading = () => {
   return (
-    <div>
+    <div className="centerContent">
       <div className={styles.sk_circle}>
         <div className={`${styles.sk_circle1} ${styles.sk_child}`}></div>
         <div className={`${styles.sk_circle2} ${styles.sk_child}`}></div>
