@@ -1,4 +1,4 @@
-@import "../../globalColor.scss";
+@use "../../globalColor" as *;
 
 .dark_mode {
   background-color: $darkBackground;

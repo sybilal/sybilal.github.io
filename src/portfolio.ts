@@ -47,6 +47,10 @@ const socialMediaLinks = {
   github: "https://github.com/sybilal",
   linkedin: "https://www.linkedin.com/in/bilalsyed95/",
   gmail: "sbilalahmed95@gmail.com",
+  gitlab: "https://gitlab.com/saadpasta",
+  facebook: "",
+  medium: "",
+  stackoverflow: "",
 
 
   kaggle: "",

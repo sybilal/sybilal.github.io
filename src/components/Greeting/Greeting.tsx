@@ -10,6 +10,7 @@ import Button from "../Button";
 import DisplayLottie from "../DisplayLottie";
 import SocialMedia from "../SocialMedia";
 import styles from "./Greeting.module.scss";
+
 export default function Greeting() {
   const { isDark } = useContext(StyleContext);
   if (!greeting.displayGreeting) {

@@ -1,15 +1,12 @@
-import { useContext } from "react";
-import ExperienceCard from "../../components/ExperienceCard";
-import StyleContext from "../../contexts/StyleContext";
 import { workExperiences } from "../../portfolio";
 import "./WorkExperience.scss";
 
 export default function WorkExperience() {
-  const { isDark } = useContext(StyleContext);
+  // const { isDark } = useContext(StyleContext);
   if (workExperiences.display) {
     return (
       <div id="experience">
-        <Fade bottom duration={1000} distance="20px">
+        {/* <Fade bottom duration={1000} distance="20px">
           <div className="experience-container" id="workExperience">
             <div>
               <h1 className="experience-heading">Experiences</h1>
@@ -33,7 +30,7 @@ export default function WorkExperience() {
               </div>
             </div>
           </div>
-        </Fade>
+        </Fade> */}
       </div>
     );
   }

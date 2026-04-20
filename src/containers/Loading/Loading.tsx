@@ -1,5 +1,5 @@
 
-import styles from "./loading.module.scss";
+import styles from "./Loading.module.scss";
 
 const Loading = () => {
   return (

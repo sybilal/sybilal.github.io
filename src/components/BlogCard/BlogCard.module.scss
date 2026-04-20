@@ -1,4 +1,4 @@
-﻿@import "../../_globalColor";
+﻿@use "./globalColor" as *;
 
 .small_dark {
   color: $textColorDark !important;

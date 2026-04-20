@@ -1,4 +1,4 @@
-﻿@import "../../_globalColor";
+﻿@use "./globalColor" as *;
 
 .repo_card_div {
   color: $githubRepoCardColor;
