@@ -17,9 +17,11 @@ const ExperienceCard = ({ cardInfo, isDark }: { cardInfo: WorkExperienceType; is
 
   const getColorArrays = async () => {
     const color = await ColorThief.getColor(imgRef.current);
-    console.log("Extracted color:", color.rgb());
-    const rgb = color.rgb();
-    setColorArrays([rgb.r, rgb.g, rgb.b]);
+    if (color) {
+      const rgb = color.rgb();
+      setColorArrays([rgb.r, rgb.g, rgb.b]);
+
+    }
   };
 
   const rgb = (values: number[] | null) => {

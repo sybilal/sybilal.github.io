@@ -76,7 +76,7 @@ export interface WorkExperienceType {
     companylogo: string;
     date: string;
     desc: string;
-    descBullets?: string[];
+    descBullets: string[];
     backgroundColor?: string;
 }
 
