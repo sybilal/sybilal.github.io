@@ -77,6 +77,7 @@ export interface WorkExperienceType {
     date: string;
     desc: string;
     descBullets?: string[];
+    backgroundColor?: string;
 }
 
 export interface WorkExperiencesType {

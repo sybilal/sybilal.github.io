@@ -1,22 +1,35 @@
 ﻿import * as ColorThief from "colorthief";
-import { createRef, useState } from "react";
+import { createRef, useEffect, useState } from "react";
 import styles from "./ExperienceCard.module.scss";
+import type { WorkExperienceType } from "../../portfolioTypes";
 
-const ExperienceCard = ({ cardInfo, isDark }: { cardInfo: any; isDark: boolean }) => {
+const ExperienceCard = ({ cardInfo, isDark }: { cardInfo: WorkExperienceType; isDark: boolean }) => {
   const [colorArrays, setColorArrays] = useState<number[] | null>(null);
   const imgRef = createRef<HTMLImageElement>();
 
-  const getColorArrays = async () => {
-    if (imgRef.current) {
-      const color = await ColorThief.getColor(imgRef.current);
-      setColorArrays(color as unknown as number[]);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  useEffect(() => {
+    if (imgRef.current && isImageLoaded) {
+      getColorArrays();
     }
+  }, [imgRef.current, isImageLoaded]);
+
+  const getColorArrays = async () => {
+    const color = await ColorThief.getColor(imgRef.current);
+    console.log("Extracted color:", color.rgb());
+    const rgb = color.rgb();
+    setColorArrays([rgb.r, rgb.g, rgb.b]);
   };
 
-  const rgb = (values: number[] | null) =>
-    typeof values === "undefined"
-      ? ""
-      : `rgb(${values?.join(", ") || ""})`;
+  const rgb = (values: number[] | null) => {
+    if (!Array.isArray(values) || values.length < 3) {
+      return "";
+    }
+
+    return `rgb(${values.join(", ")})`;
+  };
+
 
   const GetDescBullets = ({ descBullets, isDark }: { descBullets: string[]; isDark: boolean }) => {
     return descBullets
@@ -47,9 +60,10 @@ const ExperienceCard = ({ cardInfo, isDark }: { cardInfo: any; isDark: boolean }
           crossOrigin={"anonymous"}
           ref={imgRef}
           className={styles.experience_roundedimg}
+          style={{ backgroundColor: cardInfo.backgroundColor }}
           src={cardInfo.companylogo}
           alt={cardInfo.company}
-          onLoad={() => getColorArrays()}
+          onLoad={() => setIsImageLoaded(true)}
         />
       </div>
       <div className={styles.experience_text_details}>

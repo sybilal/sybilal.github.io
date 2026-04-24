@@ -12,7 +12,7 @@ import Footer from "../../components/Footer";
 // import Talks from "./talks/Talks";
 // import Podcast from "./podcast/Podcast";
 import Education from "../Education";
-import ScrollToTopButton from "../TopButton";
+import ScrollToTopButton from "../ScrollToTopButton";
 // import Twitter from "./twitter-embed/twitter";
 // import Profile from "./profile/Profile";
 import { StyleProvider } from "../../contexts/StyleContext";
@@ -21,6 +21,7 @@ import { splashScreen } from "../../portfolio";
 import SplashScreen from "../SplashScreen";
 import styles from "./Main.module.scss";
 import Greeting from "../../components/Greeting";
+import WorkExperience from "../WorkExperience/WorkExperience";
 
 const Main = () => {
   const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
@@ -56,8 +57,8 @@ const Main = () => {
             {/* <Skills />
             <StackProgress />*/}
             <Education />
-            {/*<WorkExperience />
-            <Projects />
+            <WorkExperience />
+            {/*<Projects />
             <StartupProject />
             <Achievement />
             <Blogs /> */}

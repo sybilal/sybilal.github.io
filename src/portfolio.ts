@@ -4,18 +4,20 @@
 
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation.json"; // Rename to your file name for custom animation
-import harvardLogo from "./assets/images/harvardLogo.png";
-import stanfordLogo from "./assets/images/stanfordLogo.png";
-import facebookLogo from "./assets/images/facebookLogo.png";
-import quoraLogo from "./assets/images/quoraLogo.png";
-import airbnbLogo from "./assets/images/airbnbLogo.png";
+import bahriaUniversityLogo from "./assets/images/bahriaLogo.png";
+
 import saayaHealthLogo from "./assets/images/saayaHealthLogo.webp";
 import nextuLogo from "./assets/images/nextuLogo.webp";
 import codeInLogo from "./assets/images/codeInLogo.webp";
 import googleAssistantLogo from "./assets/images/googleAssistantLogo.webp";
 import pwaLogo from "./assets/images/pwaLogo.webp";
 import type { AchievementSectionType, BigProjectsType, BlogSectionType, ContactInfoType, EducationInfoType, OpenSourceType, PodcastSectionType, ResumeSectionType, TalkSectionType, TechStackType, TwitterDetailsType, WorkExperiencesType } from "./portfolioTypes";
-
+import resume from "./assets/resume.pdf";
+import emiratesNbdLogo from "./assets/images/emirates_nbd_logo.svg";
+import arrowLabsLogo from "./assets/images/arrowlabs_logo.svg";
+import sviLogo from "./assets/images/svi_logo.png";
+import tpsLogo from "./assets/images/tps_logo.png";
+import igonLogo from "./assets/images/igon_solutions_logo.jpg";
 // Splash Screen
 
 const splashScreen = {
@@ -31,13 +33,13 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Bilal",
+  username: "Syed Bilal",
   title: "Hi all, I'm Bilal",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
+    `Senior Frontend Engineer with 8 + years of experience building scalable, real- time web applications in banking and enterprise environments.`
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
+    resume, // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -47,7 +49,7 @@ const socialMediaLinks = {
   github: "https://github.com/sybilal",
   linkedin: "https://www.linkedin.com/in/bilalsyed95/",
   gmail: "sbilalahmed95@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
+  gitlab: "",
   facebook: "",
   medium: "",
   stackoverflow: "",
@@ -143,23 +145,14 @@ const educationInfo: EducationInfoType = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Harvard University",
-      logo: harvardLogo,
-      subHeader: "Master of Science in Computer Science",
-      duration: "September 2017 - April 2019",
-      desc: "Participated in the research of XXX and published 3 papers.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
-    },
-    {
-      schoolName: "Stanford University",
-      logo: stanfordLogo,
+      schoolName: "Bahria University",
+      logo: bahriaUniversityLogo,
       subHeader: "Bachelor of Science in Computer Science",
-      duration: "September 2013 - April 2017",
-      desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
+      duration: "2014 - 2017",
+      desc: "Thesis: Big Data Analytics in Healthcare",
+      descBullets: [
+        "CGPA: 3.03/4",
+      ]
     }
   ]
 };
@@ -191,31 +184,77 @@ const workExperiences: WorkExperiencesType = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: facebookLogo,
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      backgroundColor: "#072447",
+      role: "Senior Software Engineer (React)",
+      company: "Emirates NBD",
+      companylogo: emiratesNbdLogo,
+      date: "August 2022 - January 2026",
+      desc: "Built scalable real-time banking applications using React, Next.js, TypeScript, Module Federation, WebRTC, WebSockets, SSE and REST APIs.",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Led development of QMS Dashboard and Kiosk application deployed across 200+ bank branches in the UAE, serving more than 9 million customers.",
+        "Architected and built a WebRTC video-calling micro-frontend using Module Federation and LiveKit.",
+        "Integrated the video-calling micro-frontend into Teller Dashboard and customer-facing ITM applications.",
+        "Developed a React-based AI chatbot for banking agents using OpenAI APIs with asynchronous and streaming interactions.",
+        "Developed a Fraud Monitoring dashboard using Next.js, SSE and REST APIs for real-time alerts and investigation workflows.",
+        "Developed a role-based MRHE housing workflow platform with HTML Canvas signature capture on iPad.",
+        "Conducted technical interviews, mentored junior engineers and contributed to code quality standards."
       ]
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: quoraLogo,
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      backgroundColor: "#1f0954",
+      role: "Frontend Developer (Angular)",
+      company: "Arrow Labs LLC",
+      companylogo: arrowLabsLogo,
+      date: "August 2021 - July 2022",
+      desc: "Modernized enterprise deskless and field service management applications using Angular, TypeScript, RxJS and Angular Material.",
+      descBullets: [
+        "Migrated a legacy ASP.NET deskless and field service management platform to Angular 13.",
+        "Rebuilt core modules with RxJS and Angular Material for workforce management, security operations and field service workflows.",
+        "Implemented lazy-loaded modules and service-based architecture, reducing application load time from 7s to 0.5s.",
+        "Migrated 6 core modules to Angular Material."
+      ]
     },
     {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: airbnbLogo,
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      backgroundColor: "#fff",
+      role: "Frontend Developer (Angular)",
+      company: "Strategic Ventures Investments LLC",
+      companylogo: sviLogo,
+      date: "January 2020 - August 2021",
+      desc: "Developed Angular web applications and PWAs for property management, brokerage and leasing operations.",
+      descBullets: [
+        "Developed web applications and PWAs using Angular and TypeScript.",
+        "Implemented frontend features for a property management ecosystem through REST API integrations.",
+        "Built 10+ modules from scratch using reusable components, services and lazy-loaded modules.",
+        "Delivered a Property Management System and Broker Portal deployed on AWS EC2, onboarding 50+ landlords and 5 brokers."
+      ]
+    },
+    {
+      role: "SQA Automation Engineer",
+      company: "TPS Pakistan Pvt. Ltd",
+      companylogo: tpsLogo,
+      backgroundColor: "#fff",
+      date: "May 2018 - August 2019",
+      desc: "Automated regression and functional test coverage using Selenium to improve product quality and release stability.",
+      descBullets: [
+        "Automated 1,200+ test cases using Selenium.",
+        "Achieved 97% test coverage across key product modules.",
+        "Improved release stability across multiple product modules."
+      ]
+    },
+    {
+      role: "Full Stack Web Developer",
+      company: "IGON Solutions",
+      companylogo: igonLogo,
+      date: "February 2018 - May 2018",
+      desc: "Developed web applications using PHP, MySQL, JavaScript, jQuery, Bootstrap, HTML and CSS.",
+      descBullets: [
+        "Built an SMS marketing portal with back-office and customer-facing features.",
+        "Developed a drag-and-drop newsletter builder.",
+        "Implemented frontend and backend functionality using PHP, MySQL, JavaScript and Bootstrap."
+      ]
     }
   ]
+
 };
 
 /* Your Open Source Section to View Your Github Pinned Projects

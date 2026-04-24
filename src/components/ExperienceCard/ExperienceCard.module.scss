@@ -1,18 +1,20 @@
-﻿@use "./globalColor" as *;
+﻿@use "../../globalColor" as *;
+
+.experience_card,
+.experience_card_dark {
+  flex: 1;
+  border-radius: 10px;
+}
 
 .experience_card {
-  position: relative;
   background-color: $lightBackground2;
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  border-radius: 10px;
   border: 1px solid $lightBorder1;
 }
 
 .experience_card_dark {
-  position: relative;
   background-color: $darkBackground;
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  border-radius: 10px;
   border: 1px solid $lightBorder1;
 }
 
@@ -55,13 +57,12 @@
 .experience_div_company {
   position: absolute;
   background: transparent;
-  height: 9rem;
+  height: 100%;
   top: 0;
   left: 0;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .experience_text_company {
@@ -79,7 +80,7 @@
 
 .experience_roundedimg {
   position: absolute;
-  object-fit: cover;
+  object-fit: contain;
   left: 0;
   right: 0;
   top: 7rem;
@@ -128,12 +129,15 @@
     padding-top: 0.5rem;
     font-size: 22px;
   }
+
   .experience_text_company {
     font-size: 22px;
   }
+
   .experience_text_date {
     font-size: 18px;
   }
+
   .experience_roundedimg {
     width: 6.5rem;
     height: 6.5rem;
@@ -144,12 +148,15 @@
   .experience_text_role {
     font-size: 22px;
   }
+
   .experience_text_company {
     font-size: 22px;
   }
+
   .experience_text_date {
     font-size: 18px;
   }
+
   .experience_text_desc {
     font-size: 16px;
   }
