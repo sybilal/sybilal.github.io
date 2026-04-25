@@ -9,11 +9,8 @@
   color: $textColorDark;
 }
 
-.dark_menu li a {
-  color: $textColorDark !important;
-}
 
-.dark_menu li a.logo_name {
+.dark_menu li a {
   color: $textColorDark !important;
 }
 
@@ -21,8 +18,8 @@
   background-color: $buttonColor !important;
 }
 
-.dark_menu.header .logo {
-  color: unset;
+.dark_menu .logo_name{
+  color: $textColorDark !important;
 }
 
 .header {
@@ -73,6 +70,7 @@
   font-variant-ligatures: no-common-ligatures;
   -webkit-font-variant-ligatures: no-common-ligatures;
   padding: 0 10px;
+  color: $buttonColor;
 }
 
 .header .menu {

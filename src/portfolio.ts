@@ -21,7 +21,7 @@ import igonLogo from "./assets/images/igon_solutions_logo.jpg";
 // Splash Screen
 
 const splashScreen = {
-  enabled: true, // set false to disable splash screen
+  enabled: false, // set false to disable splash screen
   animation: splashAnimation,
   duration: 1000 // Set animation duration as per your animation
 };
