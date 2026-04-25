@@ -1,0 +1,24 @@
+@use '../../styles/variables' as *;
+
+.card {
+  background: rgba($color-surface-container, 0.7);
+  border: 1px solid $glass-border;
+  border-radius: $radius-lg;
+  padding: $stack-lg;
+  transition: all $transition-medium;
+  overflow: hidden;
+  position: relative;
+
+  &:hover {
+    border-color: $glass-border-hover;
+    box-shadow: 0 4px 32px rgba($indigo, 0.06);
+  }
+
+  &.interactive:hover {
+    transform: translateY(-3px);
+    border-color: rgba($indigo, 0.25);
+    box-shadow: 0 8px 40px rgba($indigo, 0.1);
+  }
+
+  &.noPad { padding: 0; }
+}

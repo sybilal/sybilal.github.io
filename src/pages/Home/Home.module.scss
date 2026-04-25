@@ -1,0 +1,249 @@
+@use '../../styles/variables' as *;
+
+.page { min-height: 100vh; padding-top: 62px; }
+
+// ── Hero ────────────────────────────────────────────────────
+.hero {
+  padding: $section-gap $margin-page ($stack-lg * 3);
+  max-width: $container-max;
+  margin: 0 auto;
+  overflow: hidden;
+  @media (max-width: 768px) { padding: ($stack-lg * 3) $stack-lg ($stack-lg * 2); }
+}
+
+.heroGlow {
+  position: absolute;
+  top: -180px;
+  right: -160px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba($indigo, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.heroGlow2 {
+  position: absolute;
+  bottom: -100px;
+  left: -120px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba($cyan, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.heroOverline {
+  font-family: $font-headline;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: $indigo-light;
+  margin-bottom: $stack-md;
+  animation: fadeInUp 0.5s $ease-out both;
+}
+
+.heroTitle {
+  font-family: $font-headline;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: $white;
+  margin-bottom: $stack-lg;
+  animation: fadeInUp 0.5s $ease-out 0.08s both;
+  @media (max-width: 1024px) { font-size: 52px; }
+  @media (max-width: 640px) { font-size: 38px; }
+}
+
+.heroHighlight {
+  background: linear-gradient(135deg, $indigo-light, $cyan-light);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: gradient-shift 5s ease infinite;
+}
+
+.heroSubtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  color: $color-on-surface-variant;
+  max-width: 640px;
+  margin-bottom: $stack-lg;
+  animation: fadeInUp 0.5s $ease-out 0.16s both;
+}
+
+.heroCta {
+  display: flex;
+  gap: $stack-md;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.5s $ease-out 0.24s both;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 28px;
+  background: $indigo;
+  color: $white;
+  font-family: $font-body;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: $radius-lg;
+  transition: all $transition-fast;
+  &:hover { box-shadow: 0 0 24px rgba($indigo, 0.5); transform: translateY(-2px); }
+}
+
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 28px;
+  background: transparent;
+  color: $color-primary;
+  font-family: $font-body;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid rgba($indigo, 0.4);
+  border-radius: $radius-lg;
+  transition: all $transition-fast;
+  &:hover { background: rgba($indigo, 0.08); border-color: $indigo; }
+}
+
+// ── Stats ───────────────────────────────────────────────────
+.stats {
+  padding: ($stack-lg * 2) $margin-page;
+  max-width: $container-max;
+  margin: 0 auto;
+  @media (max-width: 768px) { padding: $stack-lg * 1.5 $stack-lg; }
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $gutter;
+  @media (max-width: 768px) { grid-template-columns: repeat(2, 1fr); }
+}
+
+.statCard { text-align: center; padding: $stack-lg $stack-md; }
+
+.statValue {
+  font-family: $font-headline;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: $white;
+  line-height: 1;
+  margin-bottom: $stack-sm;
+}
+
+.statLabel {
+  font-family: $font-body;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-on-surface-variant;
+}
+
+// ── Tech Arsenal ────────────────────────────────────────────
+.arsenal {
+  padding: $section-gap $margin-page;
+  max-width: $container-max;
+  margin: 0 auto;
+  @media (max-width: 768px) { padding: ($stack-lg * 3) $stack-lg; }
+}
+
+.arsenalGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $gutter;
+  @media (max-width: 768px) { grid-template-columns: 1fr; }
+}
+
+.arsenalCategory { display: flex; flex-direction: column; gap: $stack-md; }
+
+.arsenalTitle {
+  font-family: $font-headline;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: $indigo-light;
+  text-transform: uppercase;
+  margin-bottom: $stack-sm;
+}
+
+.arsenalChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $stack-sm;
+}
+
+// ── Featured Projects ───────────────────────────────────────
+.featured {
+  padding: $section-gap $margin-page;
+  max-width: $container-max;
+  margin: 0 auto;
+  @media (max-width: 768px) { padding: ($stack-lg * 3) $stack-lg; }
+}
+
+.featuredGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $gutter;
+  @media (max-width: 768px) { grid-template-columns: 1fr; }
+}
+
+.projectCard { cursor: default; }
+
+.projectImage {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(135deg, $color-surface-container-high, $color-surface-container);
+  border-radius: $radius-lg $radius-lg 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba($indigo, 0.04), rgba($cyan, 0.04));
+  }
+}
+
+.projectIcon { font-size: 40px; opacity: 0.25; z-index: 1; }
+
+.projectContent { padding: $stack-lg; }
+
+.projectMeta {
+  font-family: $font-headline;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: $indigo-light;
+  text-transform: uppercase;
+  margin-bottom: $stack-sm;
+}
+
+.projectTitle {
+  font-family: $font-headline;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: $white;
+  margin-bottom: $stack-sm;
+}
+
+.projectDesc {
+  font-size: 14px;
+  color: $color-on-surface-variant;
+  line-height: 1.6;
+  margin-bottom: $stack-md;
+}
+
+.projectTags { display: flex; flex-wrap: wrap; gap: 6px; }

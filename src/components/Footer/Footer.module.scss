@@ -1,15 +1,89 @@
-﻿@use "./globalColor" as *;
+@use '../../styles/variables' as *;
 
-.footer_text {
-  text-align: center;
-  color: $subTitle !important;
+.footer {
+  padding: ($stack-lg * 2) $margin-page $stack-lg;
+  border-top: 1px solid $glass-border;
+  background: $color-surface-container-lowest;
+  @media (max-width: 768px) { padding: $stack-lg * 1.5 $stack-lg $stack-lg; }
 }
 
-.dark_mode {
-  color: $textColorDark !important;
+.container {
+  max-width: $container-max;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: $stack-lg;
 }
 
-.footer_div {
-  margin-top: 2rem;
-  padding-bottom: 1rem;
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: $stack-lg;
+}
+
+.brand { display: flex; flex-direction: column; gap: $stack-md; }
+
+.logo {
+  font-family: $font-headline;
+  font-weight: 700;
+  font-size: 16px;
+  color: $white;
+}
+
+.tagline {
+  font-size: 14px;
+  color: $color-on-surface-variant;
+  max-width: 340px;
+  line-height: 1.5;
+}
+
+.links { display: flex; gap: $stack-lg; }
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: $font-body;
+  font-size: 14px;
+  font-weight: 500;
+  color: $color-on-surface-variant;
+  transition: color $transition-fast;
+  svg { width: 16px; height: 16px; fill: currentColor; }
+  &:hover { color: $color-primary; }
+}
+
+.divider { width: 100%; height: 1px; background: $glass-border; }
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: $stack-md;
+}
+
+.copyright {
+  font-family: $font-body;
+  font-size: 12px;
+  font-weight: 500;
+  color: $color-outline;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: $cyan-light;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $cyan;
+  box-shadow: 0 0 8px rgba($cyan, 0.5);
 }

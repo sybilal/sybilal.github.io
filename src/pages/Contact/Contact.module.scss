@@ -1,0 +1,179 @@
+@use '../../styles/variables' as *;
+
+.page {
+  min-height: 100vh;
+  padding-top: 62px;
+  position: relative;
+}
+
+.glow {
+  position: absolute;
+  top: 120px;
+  right: -80px;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba($indigo, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.container {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: $section-gap $margin-page;
+  @media (max-width: 768px) { padding: ($stack-lg * 3) $stack-lg; }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $stack-lg * 2;
+  align-items: start;
+  @media (max-width: 900px) { grid-template-columns: 1fr; gap: $stack-lg; }
+}
+
+// ── Form ────────────────────────────────────────────────────
+.form { display: flex; flex-direction: column; gap: $stack-md + $stack-sm; }
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-family: $font-body;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $color-on-surface-variant;
+}
+
+.input, .textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: $color-surface-container-lowest;
+  border: 1px solid $glass-border;
+  border-radius: $radius-lg;
+  font-size: 15px;
+  color: $color-on-surface;
+  transition: all $transition-fast;
+
+  &::placeholder { color: $color-outline; }
+
+  &:focus {
+    border-color: $cyan;
+    box-shadow: 0 0 0 3px rgba($cyan, 0.08), 0 0 12px rgba($cyan, 0.08);
+  }
+}
+
+.textarea { resize: vertical; min-height: 150px; line-height: 1.6; }
+
+.submitBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $stack-sm;
+  padding: 14px 32px;
+  background: $indigo;
+  color: $white;
+  font-family: $font-body;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: $radius-lg;
+  transition: all $transition-fast;
+  cursor: pointer;
+  margin-top: $stack-sm;
+
+  &:hover { box-shadow: 0 0 28px rgba($indigo, 0.5); transform: translateY(-2px); }
+  &:active { transform: translateY(0); }
+}
+
+// ── Info Panel ──────────────────────────────────────────────
+.infoPanel { display: flex; flex-direction: column; gap: $stack-md + $stack-sm; }
+
+.infoCard { display: flex; flex-direction: column; gap: $stack-sm; }
+
+.infoLabel {
+  font-family: $font-headline;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: $indigo-light;
+}
+
+.infoValue {
+  font-family: $font-headline;
+  font-size: 22px;
+  font-weight: 600;
+  color: $white;
+}
+
+.infoDesc {
+  font-size: 14px;
+  color: $color-on-surface-variant;
+  line-height: 1.5;
+}
+
+.infoLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: $cyan-light;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color $transition-fast;
+  &:hover { color: $white; }
+}
+
+// ── Social grid ─────────────────────────────────────────────
+.socialGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $stack-md;
+  margin-top: $stack-sm;
+}
+
+.socialCard {
+  display: flex;
+  align-items: center;
+  gap: $stack-md;
+  cursor: pointer;
+}
+
+.socialIcon {
+  width: 38px;
+  height: 38px;
+  border-radius: $radius-lg;
+  background: rgba($indigo, 0.06);
+  border: 1px solid rgba($indigo, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all $transition-fast;
+  svg { width: 16px; height: 16px; fill: $indigo-light; transition: fill $transition-fast; }
+}
+
+.socialInfo { display: flex; flex-direction: column; gap: 1px; }
+
+.socialName {
+  font-family: $font-body;
+  font-size: 14px;
+  font-weight: 500;
+  color: $white;
+}
+
+.socialHandle {
+  font-family: $font-headline;
+  font-size: 12px;
+  font-weight: 400;
+  color: $color-outline;
+}
+
+.socialCard:hover .socialIcon {
+  background: rgba($indigo, 0.12);
+  border-color: rgba($indigo, 0.3);
+  box-shadow: 0 0 10px rgba($indigo, 0.15);
+}

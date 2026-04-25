@@ -1,0 +1,42 @@
+@use '../../styles/variables' as *;
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 14px;
+  border-radius: $radius-full;
+  font-family: $font-body;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all $transition-fast;
+  cursor: default;
+  background: transparent;
+  border: 1px solid $slate-700;
+  color: $color-on-surface-variant;
+
+  &:hover {
+    border-color: $indigo;
+    background: rgba($indigo, 0.05);
+    color: $color-primary;
+  }
+
+  &.indigo {
+    border-color: rgba($indigo, 0.3);
+    color: $color-primary;
+    &:hover { border-color: $indigo; background: rgba($indigo, 0.08); }
+  }
+
+  &.cyan {
+    border-color: rgba($cyan, 0.3);
+    color: $cyan-light;
+    &:hover { border-color: $cyan; background: rgba($cyan, 0.08); }
+  }
+
+  &.filled {
+    background: rgba($indigo, 0.1);
+    border-color: rgba($indigo, 0.2);
+    color: $color-primary;
+    &:hover { background: rgba($indigo, 0.18); border-color: rgba($indigo, 0.4); }
+  }
+}

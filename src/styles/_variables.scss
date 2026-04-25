@@ -1,0 +1,76 @@
+// ============================================================
+// Design Tokens — Senior Engineering System (Stitch Project)
+// ============================================================
+
+// ── Colors ──────────────────────────────────────────────────
+$color-surface: #0b1326;
+$color-surface-dim: #0b1326;
+$color-surface-bright: #31394d;
+$color-surface-container-lowest: #060e20;
+$color-surface-container-low: #131b2e;
+$color-surface-container: #171f33;
+$color-surface-container-high: #222a3d;
+$color-surface-container-highest: #2d3449;
+
+$color-on-surface: #dae2fd;
+$color-on-surface-variant: #c7c4d7;
+$color-outline: #908fa0;
+$color-outline-variant: #464554;
+$color-surface-tint: #c0c1ff;
+
+$color-primary: #c0c1ff;
+$color-primary-container: #8083ff;
+$color-on-primary: #1000a9;
+
+$color-secondary: #4cd7f6;
+$color-secondary-container: #03b5d3;
+$color-on-secondary: #003640;
+
+$color-tertiary: #c4c7c9;
+
+$color-error: #ffb4ab;
+
+$color-background: #0b1326;
+$color-on-background: #dae2fd;
+
+// ── Accent shortcuts ────────────────────────────────────────
+$indigo: #6366f1;
+$indigo-light: #8083ff;
+$cyan: #06b6d4;
+$cyan-light: #4cd7f6;
+$slate-800: #1e293b;
+$slate-700: #334155;
+$white: #f8fafc;
+$void: #020617;
+
+// ── Typography ──────────────────────────────────────────────
+$font-headline: 'Space Grotesk', sans-serif;
+$font-body: 'Inter', sans-serif;
+
+// ── Spacing ─────────────────────────────────────────────────
+$stack-sm: 8px;
+$stack-md: 16px;
+$stack-lg: 32px;
+$gutter: 24px;
+$margin-page: 40px;
+$section-gap: 120px;
+$container-max: 1280px;
+
+// ── Radii ───────────────────────────────────────────────────
+$radius-sm: 0.125rem;
+$radius-default: 0.25rem;
+$radius-md: 0.375rem;
+$radius-lg: 0.5rem;
+$radius-xl: 0.75rem;
+$radius-full: 9999px;
+
+// ── Glass ───────────────────────────────────────────────────
+$glass-bg: rgba(15, 23, 42, 0.6);
+$glass-border: rgba(255, 255, 255, 0.08);
+$glass-border-hover: rgba(255, 255, 255, 0.15);
+$glass-blur: 12px;
+
+// ── Transitions ─────────────────────────────────────────────
+$ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+$transition-fast: 200ms $ease-out;
+$transition-medium: 400ms $ease-out;

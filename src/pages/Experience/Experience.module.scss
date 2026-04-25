@@ -1,0 +1,146 @@
+@use '../../styles/variables' as *;
+
+.page { min-height: 100vh; padding-top: 62px; }
+
+.container {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: $section-gap $margin-page;
+  @media (max-width: 768px) { padding: ($stack-lg * 3) $stack-lg; }
+}
+
+// ── Timeline ────────────────────────────────────────────────
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: $stack-lg + $stack-md;
+  padding-left: $stack-lg + $stack-md;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: $color-surface-container-highest;
+  }
+}
+
+.timelineItem {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -($stack-lg + $stack-md + 1px);
+    top: $stack-lg;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid $color-outline-variant;
+    background: $color-surface;
+    z-index: 1;
+  }
+
+  &.active::before {
+    background: $indigo;
+    border-color: $indigo;
+    box-shadow: 0 0 12px rgba($indigo, 0.5);
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: $stack-sm;
+  margin-bottom: $stack-md;
+}
+
+.company {
+  font-family: $font-headline;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: $white;
+}
+
+.role {
+  font-family: $font-headline;
+  font-size: 14px;
+  font-weight: 500;
+  color: $indigo-light;
+  letter-spacing: 0.02em;
+}
+
+.location {
+  font-size: 13px;
+  color: $color-on-surface-variant;
+  margin-top: 2px;
+}
+
+.period {
+  font-family: $font-headline;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: $color-outline;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: $stack-sm;
+}
+
+.currentBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  background: rgba($cyan, 0.08);
+  border: 1px solid rgba($cyan, 0.25);
+  border-radius: $radius-full;
+  color: $cyan-light;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.currentDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $cyan;
+}
+
+.highlights {
+  display: flex;
+  flex-direction: column;
+  gap: $stack-sm + 2px;
+  margin-bottom: $stack-md;
+}
+
+.highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: $stack-sm;
+  font-size: 15px;
+  color: $color-on-surface-variant;
+  line-height: 1.55;
+
+  &::before {
+    content: '▸';
+    color: $indigo-light;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}

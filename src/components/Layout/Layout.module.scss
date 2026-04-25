@@ -1,0 +1,15 @@
+@use '../../styles/variables' as *;
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+}
+
+.pageTransition {
+  animation: fadeIn 0.4s $ease-out;
+}

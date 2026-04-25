@@ -1,7 +1,39 @@
-import './App.scss'
-import Main from './containers/Main';
+import { createBrowserRouter, RouterProvider } from 'react-router';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import Experience from './pages/Experience';
+import Skills from './pages/Skills';
+import Contact from './pages/Contact';
 
-const App = () => <Main />
+const router = createBrowserRouter(
+  [
+    {
+      element: <Layout />,
+      children: [
+        {
+          path: '/',
+          element: <Home />,
+        },
+        {
+          path: '/experience',
+          element: <Experience />,
+        },
+        {
+          path: '/skills',
+          element: <Skills />,
+        },
+        {
+          path: '/contact',
+          element: <Contact />,
+        },
+      ],
+    },
+  ],
+  {
+    basename: '/portfolio/',
+  }
+);
 
-
-export default App
+export default function App() {
+  return <RouterProvider router={router} />;
+}
