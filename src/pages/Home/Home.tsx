@@ -3,7 +3,8 @@ import GlassCard from '../../components/GlassCard';
 import TechChip from '../../components/TechChip';
 import SectionHeader from '../../components/SectionHeader';
 import AnimatedSection from '../../components/AnimatedSection';
-
+import linkedIn from "../../assets/linkedIn.svg"
+import github from "../../assets/github.svg"
 const stats = [
   { value: '8+', label: 'Years Experience' },
   { value: '9M+', label: 'Customers Served' },
@@ -87,9 +88,13 @@ const Home = () => {
 
         <div className={styles.heroCta}>
           <a href="https://linkedin.com/in/bilalsyed95/" target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
-            Connect on LinkedIn →
+            <img className={styles.linkedIn} src={linkedIn} alt="" />
+            <div className={styles.linkedInText}>
+              Connect on LinkedIn
+            </div>
           </a>
           <a href="https://github.com/sybilal" target="_blank" rel="noopener noreferrer" className={styles.btnGhost}>
+            <img className={styles.github} src={github} alt="" />
             Explore GitHub
           </a>
         </div>
