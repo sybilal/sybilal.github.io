@@ -66,7 +66,7 @@ const Home = () => {
     <div id="intro" className={styles.page}>
       {/* ── Hero ───────────────────────────────────────────── */}
       <section className={styles.hero}>
-        <div className={styles.heroGlow} />
+        {/* <div className={styles.heroGlow} /> */}
         <div className={styles.heroGlow2} />
 
         <p className={styles.heroOverline}>Senior Frontend Engineer · Berlin, Germany</p>

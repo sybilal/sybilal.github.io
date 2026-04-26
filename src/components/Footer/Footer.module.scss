@@ -4,11 +4,10 @@
   padding: ($stack-lg * 2) $margin-page $stack-lg;
   border-top: 1px solid $glass-border;
   background: $color-surface-container-lowest;
-  @media (max-width: 768px) { padding: $stack-lg * 1.5 $stack-lg $stack-lg; }
+  // @media (max-width: 768px) { padding: $stack-lg * 1.5 $stack-lg $stack-lg; }
 }
 
 .container {
-  max-width: $container-max;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

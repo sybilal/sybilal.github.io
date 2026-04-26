@@ -114,10 +114,10 @@
 
 // ── Stats ───────────────────────────────────────────────────
 .stats {
-  padding: ($stack-lg * 2) $margin-page;
+  padding: $stack-lg * 1.5 $stack-lg;;
   max-width: $container-max;
   margin: 0 auto;
-  @media (max-width: 768px) { padding: $stack-lg * 1.5 $stack-lg; }
+  // @media (max-width: 768px) { padding: $stack-lg * 1.5 $stack-lg; }
 }
 
 .statsGrid {
