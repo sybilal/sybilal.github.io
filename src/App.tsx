@@ -29,9 +29,9 @@ const router = createBrowserRouter(
       ],
     },
   ],
-  {
-    basename: '/portfolio',
-  }
+  // {
+  //   basename: '/portfolio',
+  // }
 );
 
 const App = () => {
