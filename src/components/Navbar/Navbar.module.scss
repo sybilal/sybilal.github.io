@@ -16,7 +16,9 @@
   border-bottom: 1px solid $glass-border;
   transition: all $transition-medium;
 
-  @media (max-width: 768px) { padding: $stack-md $stack-lg; }
+  @media (max-width: 768px) {
+    padding: $stack-md $stack-lg;
+  }
 
   &.scrolled {
     background: rgba($color-surface, 0.92);
@@ -35,7 +37,10 @@
   color: $white;
   cursor: pointer;
   transition: color $transition-fast;
-  &:hover { color: $color-primary; }
+
+  &:hover {
+    color: $color-primary;
+  }
 }
 
 .logoIcon {
@@ -55,7 +60,10 @@
   display: flex;
   align-items: center;
   gap: $stack-lg;
-  @media (max-width: 768px) { display: none; }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .navLink {
@@ -77,9 +85,13 @@
     transition: width $transition-fast;
   }
 
-  &:hover, &.active {
+  &:hover,
+  &.active {
     color: $color-primary;
-    &::after { width: 100%; }
+
+    &::after {
+      width: 100%;
+    }
   }
 }
 
@@ -91,7 +103,10 @@
   font-size: 12px;
   font-weight: 600;
   color: $cyan-light;
-  @media (max-width: 900px) { display: none; }
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 }
 
 .statusDot {
@@ -103,8 +118,15 @@
 }
 
 @keyframes pulse-glow-cyan {
-  0%, 100% { box-shadow: 0 0 4px rgba($cyan, 0.4); }
-  50% { box-shadow: 0 0 12px rgba($cyan, 0.8); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 4px rgba($cyan, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 12px rgba($cyan, 0.8);
+  }
 }
 
 .mobileMenuBtn {
@@ -113,7 +135,10 @@
   gap: 5px;
   cursor: pointer;
   padding: $stack-sm;
-  @media (max-width: 768px) { display: flex; }
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
 
   span {
     width: 22px;
@@ -124,9 +149,17 @@
   }
 
   &.open {
-    span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-    span:nth-child(2) { opacity: 0; }
-    span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
   }
 }
 
@@ -146,8 +179,27 @@
   z-index: 999;
 
   @media (max-width: 768px) {
-    &.open { display: flex; }
+    &.open {
+      display: flex;
+      animation: scaleIn 200ms ease-out forwards;
+    }
   }
 
-  .navLink { font-size: 22px; }
+  .navLink {
+    font-size: 22px;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform-origin: top;
+    transform: scaleY(0.75);
+    opacity: 0;
+  }
+
+  to {
+    transform-origin: top;
+    transform: scaleY(1);
+    opacity: 1;
+  }
 }
