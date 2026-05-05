@@ -90,7 +90,6 @@ const Home = () => {
             />
           </div>
         </h1>
-
         <p className={styles.heroSubtitle}>
           8+ years building high-availability web applications in banking and
           enterprise environments. Expertise in React, Next.js, Angular,
