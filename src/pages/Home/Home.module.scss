@@ -1,14 +1,21 @@
 @use '../../styles/variables' as *;
 
-.page { min-height: 100vh; padding-top: 62px; }
+.page {
+  min-height: 100vh;
+  padding-top: 62px;
+}
 
 // ── Hero ────────────────────────────────────────────────────
 .hero {
-  padding: $section-gap $margin-page ($stack-lg * 3);
-  max-width: $container-max;
-  margin: 0 auto;
-  overflow: hidden;
-  @media (max-width: 768px) { padding: ($stack-lg * 3) $stack-lg ($stack-lg * 2); }
+  padding: $section-gap $margin-page (
+    $stack-lg * 3
+  );
+max-width: $container-max;
+margin: 0 auto;
+overflow: hidden;
+@media (max-width: 768px) {
+  padding: ($stack-lg * 3) $stack-lg ($stack-lg * 2);
+}
 }
 
 .heroGlow {
@@ -43,6 +50,11 @@
   animation: fadeInUp 0.5s $ease-out both;
 }
 
+.type::after {
+  content: '|';
+  animation: cursor 1.1s infinite step-start;
+}
+
 .heroTitle {
   font-family: $font-headline;
   font-size: 72px;
@@ -52,17 +64,24 @@
   color: $white;
   margin-bottom: $stack-lg;
   animation: fadeInUp 0.5s $ease-out 0.08s both;
-  @media (max-width: 1024px) { font-size: 52px; }
-  @media (max-width: 640px) { font-size: 38px; }
+
+  @media (max-width: 1024px) {
+    font-size: 52px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 38px;
+  }
 }
 
 .heroHighlight {
   background: linear-gradient(135deg, $indigo-light, $cyan-light);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: $indigo-light;
   background-size: 200% auto;
   animation: gradient-shift 5s ease infinite;
+  height: 92px;
 }
 
 .heroSubtitle {
@@ -93,13 +112,18 @@
   font-weight: 600;
   border-radius: $radius-lg;
   transition: all $transition-fast;
-  &:hover { box-shadow: 0 0 24px rgba($indigo, 0.5); transform: translateY(-2px); }
+
+  &:hover {
+    box-shadow: 0 0 24px rgba($indigo, 0.5);
+    transform: translateY(-2px);
+  }
 }
 
 .linkedIn {
   height: 16px;
   fill: currentColor;
 }
+
 .github {
   height: 21px;
   filter: invert(100%) sepia(100%) grayscale(100%) brightness(200%);
@@ -119,12 +143,17 @@
   border: 1px solid rgba($indigo, 0.4);
   border-radius: $radius-lg;
   transition: all $transition-fast;
-  &:hover { background: rgba($indigo, 0.08); border-color: $indigo; }
+
+  &:hover {
+    background: rgba($indigo, 0.08);
+    border-color: $indigo;
+  }
 }
 
 // ── Stats ───────────────────────────────────────────────────
 .stats {
-  padding: $stack-lg * 1.5 $stack-lg;;
+  padding: $stack-lg * 1.5 $stack-lg;
+  ;
   max-width: $container-max;
   margin: 0 auto;
   // @media (max-width: 768px) { padding: $stack-lg * 1.5 $stack-lg; }
@@ -134,10 +163,16 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: $gutter;
-  @media (max-width: 768px) { grid-template-columns: repeat(2, 1fr); }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.statCard { text-align: center; padding: $stack-lg $stack-md; }
+.statCard {
+  text-align: center;
+  padding: $stack-lg $stack-md;
+}
 
 .statValue {
   font-family: $font-headline;
@@ -163,17 +198,27 @@
   padding: $section-gap $margin-page;
   max-width: $container-max;
   margin: 0 auto;
-  @media (max-width: 768px) { padding: ($stack-lg * 3) $stack-lg; }
+
+  @media (max-width: 768px) {
+    padding: ($stack-lg * 3) $stack-lg;
+  }
 }
 
 .arsenalGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: $gutter;
-  @media (max-width: 768px) { grid-template-columns: 1fr; }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 
-.arsenalCategory { display: flex; flex-direction: column; gap: $stack-md; }
+.arsenalCategory {
+  display: flex;
+  flex-direction: column;
+  gap: $stack-md;
+}
 
 .arsenalTitle {
   font-family: $font-headline;
@@ -196,17 +241,25 @@
   padding: $section-gap $margin-page;
   max-width: $container-max;
   margin: 0 auto;
-  @media (max-width: 768px) { padding: ($stack-lg * 3) $stack-lg; }
+
+  @media (max-width: 768px) {
+    padding: ($stack-lg * 3) $stack-lg;
+  }
 }
 
 .featuredGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: $gutter;
-  @media (max-width: 768px) { grid-template-columns: 1fr; }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 
-.projectCard { cursor: default; }
+.projectCard {
+  cursor: default;
+}
 
 .projectImage {
   width: 100%;
@@ -218,6 +271,7 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
+
   &::after {
     content: '';
     position: absolute;
@@ -226,9 +280,15 @@
   }
 }
 
-.projectIcon { font-size: 40px; opacity: 0.25; z-index: 1; }
+.projectIcon {
+  font-size: 40px;
+  opacity: 0.25;
+  z-index: 1;
+}
 
-.projectContent { padding: $stack-lg; }
+.projectContent {
+  padding: $stack-lg;
+}
 
 .projectMeta {
   font-family: $font-headline;
@@ -256,4 +316,8 @@
   margin-bottom: $stack-md;
 }
 
-.projectTags { display: flex; flex-wrap: wrap; gap: 6px; }
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}

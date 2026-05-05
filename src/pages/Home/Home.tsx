@@ -5,6 +5,7 @@ import SectionHeader from '../../components/SectionHeader';
 import AnimatedSection from '../../components/AnimatedSection';
 import linkedIn from "../../assets/linkedIn.svg"
 import github from "../../assets/github.svg"
+import { TypeAnimation } from 'react-type-animation';
 const stats = [
   { value: '8+', label: 'Years Experience' },
   { value: '9M+', label: 'Customers Served' },
@@ -73,11 +74,21 @@ const Home = () => {
         <p className={styles.heroOverline}>Senior Frontend Engineer · Berlin, Germany</p>
 
         <h1 className={styles.heroTitle}>
-          Syed Bilal Ahmed
+          <TypeAnimation
+            sequence={["Hi, I'm Syed Bilal Ahmed"]}
+            wrapper="span"
+            speed={45}
+            cursor={false}
+          />
           <br />
-          <span className={styles.heroHighlight}>
-            Building Scalable Web Apps
-          </span>
+          <div className={styles.heroHighlight}>
+            <TypeAnimation
+              sequence={[1500, 'Building Scalable Web Apps']}
+              wrapper="div"
+              speed={45}
+              cursor={false}
+            />
+          </div>
         </h1>
 
         <p className={styles.heroSubtitle}>
