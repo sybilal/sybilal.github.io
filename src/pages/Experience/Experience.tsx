@@ -21,7 +21,7 @@ const experiences = [
       'Developed a role-based workflow platform for MRHE housing services, digitized approval processes and implemented HTML Canvas signature capture on iPad to replace paper-based approvals.',
       'Conducted technical interviews and mentored junior engineers, contributed to hiring decisions and code quality standards.',
     ],
-    tags: ['React', 'Next.js', 'TypeScript', 'Module Federation', 'WebRTC', 'LiveKit', 'OpenAI', 'SSE', 'AWS'],
+    tags: ['React', 'Next.js', 'TypeScript', 'Module Federation', 'WebSockets', 'WebRTC', 'LiveKit', 'OpenAI', 'SSE', 'AWS'],
   },
   {
     company: 'Arrow Labs LLC',
@@ -30,11 +30,11 @@ const experiences = [
     period: '08/2021 — 07/2022',
     active: false,
     highlights: [
-      'Migrated a legacy ASP.NET deskless and field service management platform to Angular 13.',
-      'Rebuilt core modules with RxJS and Angular Material within an enterprise application covering workforce management, security operations and field service workflows.',
-      'Improved performance and modularity by implementing lazy-loaded modules and service-based architecture, reduced application load time from 7s to 0.5s while migrating 6 core modules to Angular Material.',
+      'Participated in migration of a legacy ASP.NET application to React.',
+      'Rebuilt core platform modules using React, Redux and MUI.',
+      'Implemented service-based architecture and lazy-loaded modules, reducing application startup time from approximately 7 seconds to under 0.5 seconds.',
     ],
-    tags: ['Angular', 'RxJS', 'Angular Material', 'TypeScript'],
+    tags: ['React', 'TypeScript', 'Redux', 'MUI', 'JavaScript', 'REST APIs', 'HTML5', 'CSS3', 'Git', 'Agile'],
   },
   {
     company: 'Strategic Ventures Investments LLC',

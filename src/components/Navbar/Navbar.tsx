@@ -44,7 +44,7 @@ export default function Navbar() {
 
         <div className={styles.statusIndicator}>
           <span className={styles.statusDot} />
-          Available in Berlin, open to relocation
+          Available in Frankfurt (Oder), open to relocation
         </div>
 
         <button

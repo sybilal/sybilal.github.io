@@ -22,7 +22,7 @@ export default function Contact() {
           <SectionHeader
             overline="Get In Touch"
             title="Let's Connect"
-            subtitle="Open to senior frontend engineering roles, consulting, and contract opportunities in Berlin and remote."
+            subtitle="Open to senior frontend engineering roles, consulting, and contract opportunities in Frankfurt (Oder) and remote."
           />
         </AnimatedSection>
 
@@ -55,7 +55,7 @@ export default function Contact() {
             <div className={styles.infoPanel}>
               <GlassCard className={styles.infoCard}>
                 <span className={styles.infoLabel}>Location</span>
-                <h3 className={styles.infoValue}>Berlin, Germany</h3>
+                <h3 className={styles.infoValue}>Frankfurt (Oder), Germany</h3>
                 <p className={styles.infoDesc}>Chancenkarte Visa · Central European Time (UTC+1)</p>
               </GlassCard>
 

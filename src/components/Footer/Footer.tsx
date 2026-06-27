@@ -30,7 +30,7 @@ const Footer = () => {
 
         <div className={styles.bottom}>
           <span className={styles.copyright}>
-            © {new Date().getFullYear()} Syed Bilal Ahmed · Berlin, Germany
+            © {new Date().getFullYear()} Syed Bilal Ahmed · Frankfurt (Oder), Germany
           </span>
           {/* <div className={styles.status}>
             <span className={styles.statusDot} />

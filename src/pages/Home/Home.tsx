@@ -71,7 +71,7 @@ const Home = () => {
         {/* <div className={styles.heroGlow} /> */}
         <div className={styles.heroGlow2} />
 
-        <p className={styles.heroOverline}>Senior Frontend Engineer · Berlin, Germany</p>
+        <p className={styles.heroOverline}>Senior Frontend Engineer · Frankfurt (Oder), Germany</p>
 
         <h1 className={styles.heroTitle}>
           <TypeAnimation

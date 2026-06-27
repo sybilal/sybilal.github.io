@@ -11,7 +11,7 @@ Senior Frontend Engineer with 8+ years of experience building scalable, high-ava
 
 I specialize in **React (Next.js), TypeScript, and micro-frontend architectures**, with strong experience in real-time systems using **WebSockets, SSE, and WebRTC**.
 
-Currently based in **Berlin, Germany** on a Chancenkarte visa and available to start immediately.
+Currently based in **Frankfurt (Oder), Germany** on a Chancenkarte visa and available to start immediately.
 
 ---
 
