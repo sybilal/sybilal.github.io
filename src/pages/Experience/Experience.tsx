@@ -25,7 +25,7 @@ const experiences = [
   },
   {
     company: 'Arrow Labs LLC',
-    role: 'Frontend Developer (Angular)',
+    role: 'Frontend Developer (React)',
     location: 'Dubai, UAE',
     period: '08/2021 — 07/2022',
     active: false,
